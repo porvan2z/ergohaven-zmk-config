@@ -44,8 +44,8 @@
         compatible = "zmk,combos";
 
         kha {
-            bindings = <&kp RU_CYRILLIC_HA>;
-            key-positions = <6 7>;
+            bindings = <&kp RU_CYRILLIC_SHCHA>;
+            key-positions = <2 1>;
             layers = <1>;
         };
 
