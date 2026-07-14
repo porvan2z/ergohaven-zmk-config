@@ -122,6 +122,47 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        // Новые макросы для запятой и точки
+        en_comma: en_comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en>, <&kp COMMA>, <&to_ru>;
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
+
+        en_dot: en_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en>, <&kp DOT>, <&to_ru>;
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
+
+        en_semi: en_semi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en>, <&kp SEMI>, <&to_ru>;
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
+
+        en_qmark: en_qmark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en>, <&kp QMARK>, <&to_ru>;
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
+
+        en_colon: en_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en>, <&kp COLON>, <&to_ru>;
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
     };
 
     keymap {
@@ -164,7 +205,7 @@
             bindings = <
   &en TILDE               &en LT          &kp EQUAL         &en GT           &en GRAVE                    &en CARET  &en LBKT  &kp UNDER           &en RBKT    &en DLLR
   &hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &en LBRC  &hmr RSHFT RU_SEMI  &en RBRC    &hmr RGUI EXCL
-  &en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &en AMPS                     &en AT     &en PIPE  &kp RU_COMMA        &kp RU_DOT  &kp RU_QMARK
+  &en HASH                &kp STAR        &en_colon         &kp RU_FSLH      &en AMPS                     &en AT     &en PIPE  &en_comma           &en_dot     &en_qmark
                                                             &trans           &mo 5      &trans    &trans  &none      &trans
             >;
 
